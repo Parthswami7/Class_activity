@@ -1,18 +1,32 @@
 class Student {
-    constructor(name, year) {
-        this.name = name;   // assign name to the object
-        this.year = year;   // assign year to the object
+    constructor(name) {
+        this.studentname = name;
     }
 
-    age() {
-        let currentYear = new Date().getFullYear();
-        return currentYear - this.year;
+    // Static method (called on the class, not instance)
+    static hello() {
+        return "Hello!!";
+    }
+
+    // Static method that takes an object as parameter
+    static welcome(x) {
+        return "Welcome " + x.studentname;
+    }
+
+    // Instance method (called on an object)
+    hi() {
+        return "Hi " + this.studentname;
     }
 }
 
-const student1 = new Student("Parth", 2011);
+// Create an object
+let myname = new Student("Carol");
 
-document.getElementById("student1").innerHTML =
-    "My name is " + student1.name +
-    ". I was born in " + student1.year +
-    ". My age is " + student1.age() + ".";
+// Call static method on class
+document.getElementById("hello").innerHTML = Student.hello();
+
+// Call instance method on object
+document.getElementById("hi").innerHTML = myname.hi();
+
+// Call static method with object as argument
+document.getElementById("welcome").innerHTML = Student.welcome(myname);
