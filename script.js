@@ -1,29 +1,18 @@
-class student{
-    constructor (name,year)
-    {this.name = name;
-        this.year = year;
+class Student {
+    constructor(name, year) {
+        this.name = name;   // assign name to the object
+        this.year = year;   // assign year to the object
     }
-age() {let date = new Date();}  
-}
-student1 = new student(Parth,2011)
-age() {
 
-    let currentYear = new Date().getFullYear();
-
-    return currentYear - this.year;
-
+    age() {
+        let currentYear = new Date().getFullYear();
+        return currentYear - this.year;
+    }
 }
 
-}
-
-// Create one student object
-
-const student1 = new Student("Akansha", 2019);
+const student1 = new Student("Parth", 2011);
 
 document.getElementById("student1").innerHTML =
-
-"My name is " + student1.name +
-
-    ". I joined in " + student1.year +
-
+    "My name is " + student1.name +
+    ". I was born in " + student1.year +
     ". My age is " + student1.age() + ".";
