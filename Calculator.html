@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        .calculator {
+            width: 220px;
+            padding: 20px;
+            border: 2px solid #222;
+            border-radius: 10px;
+        }
+
+        #result {
+            width: 100%;
+            height: 40px;
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .btn {
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+            margin: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+
+        <br>
+
+        <button class="btn" onclick="setScreenValue('7')">7</button>
+        <button class="btn" onclick="setScreenValue('8')">8</button>
+        <button class="btn" onclick="setScreenValue('9')">9</button>
+        <button class="btn" onclick="setScreenValue('/')">/</button>
+
+        <br>
+
+        <button class="btn" onclick="setScreenValue('4')">4</button>
+        <button class="btn" onclick="setScreenValue('5')">5</button>
+        <button class="btn" onclick="setScreenValue('6')">6</button>
+        <button class="btn" onclick="setScreenValue('*')">*</button>
+
+        <br>
+
+        <button class="btn" onclick="setScreenValue('1')">1</button>
+        <button class="btn" onclick="setScreenValue('2')">2</button>
+        <button class="btn" onclick="setScreenValue('3')">3</button>
+        <button class="btn" onclick="setScreenValue('-')">-</button>
+
+        <br>
+
+        <button class="btn" onclick="setScreenValue('0')">0</button>
+        <button class="btn" onclick="setScreenValue('.')">.</button>
+        <button class="btn" onclick="calculateResult()">=</button>
+        <button class="btn" onclick="setScreenValue('+')">+</button>
+
+        <br>
+
+        <button class="btn" style="width:190px" onclick="clearScreen()">C</button>
+    </div>
+
+    <script>
+        // Clears the calculator display
+        function clearScreen() {
+            document.getElementById("result").value = "";
+        }
+
+        // Appends the clicked button's value to the display
+        function setScreenValue(value) {
+            document.getElementById("result").value += value;
+        }
+
+        // Calculates and displays the result
+        function calculateResult() {
+            const resultElement = document.getElementById("result");
+            const expression = resultElement.value.trim();
+
+            // Check for empty input
+            if (expression === '') {
+                resultElement.value = 'Enter an expression';
+                return;
+            }
+
+            // Evaluate expression and handle errors
+            try {
+                resultElement.value = eval(expression);
+            } catch (e) {
+                resultElement.value = 'Invalid expression';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
