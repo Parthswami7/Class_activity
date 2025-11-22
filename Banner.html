@@ -2,79 +2,153 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/996973c893.js"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?
-family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap" rel="stylesheet" />
-
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Banner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        html {
-            scroll-behavior: smooth;
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            background: #252525;
-            font-family: "Baloo Tamma 2", cursive;
-        }
-
-        /* Main Heading Font */
-        .m-heading {
-            font-family: "Roboto Slab", serif;
-        }
-
-        .text-white {
+            min-height: 100vh;
+            background: url('1.jpg') no-repeat center center/cover;
             color: white;
         }
 
-        /* Main Container height*/
-        .main-container {
-            height: 100vh;
+        h1 {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 40px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        /* TEAM SECTION */
+        .team-section {
+            width: 90%;
+            max-width: 1200px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            gap: 30px;
+            margin: 40px auto 0;
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 25px;
+            backdrop-filter: blur(6px);
+        }
+
+        /* CARD */
+        .card {
+            width: 30%;
+            text-align: center;
+        }
+
+        /* IMAGE BOX */
+        .image-box {
+            position: relative;
+            padding: 15px;
+            border-radius: 20px;
+        }
+
+        .pink {
+            background: #fde2e4;
+        }
+
+        .peach {
+            background: #fff1e6;
+        }
+
+        .blue {
+            background: #e3f0ff;
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 14px;
+        }
+
+        /* PLAY BUTTON */
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: red;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('1.jpg');
-            background-attachment: fixed;
-            background-size: cover;
+            font-size: 24px;
+            cursor: pointer;
         }
 
-        /* Aligning items in main row */
-        .main row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* TITLE */
+        .card h3 {
+            margin-top: 15px;
+            color: black;
         }
 
-        /* Changing Name Font size */
-        .main row h1 {
-            font-size: 5rem;
-        }
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .team-section {
+                flex-direction: column;
+            }
 
-        /* Making the main image the size of the screen */
-        .main_row img {
-            width: auto;
-            height: 100vh;
+            .card {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Main Container -->
-    <div class="main-container container">
-        <h2 class="text-white">Hello, I'm</h2>
-        <h1 class="text-warning m-heading">Parth Swami</h1>
-        <h2 class="text-white">A student of class 9th</h2>
+    <h1>Portfolio</h1>
+
+    <p>My name is Parth Swami</p>
+
+    <div class="team-section">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <div class="image-box pink">
+                <img src="q1.jpg">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Quote 1</h3>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <div class="image-box peach">
+                <img src="q2.jpg">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Quote 2</h3>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <div class="image-box blue">
+                <img src="q3.webp">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Quote 3</h3>
+        </div>
+
     </div>
 
 </body>
