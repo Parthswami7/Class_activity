@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A Simple Calculator</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="result">
+        <button class="btn" onclick="setScreenValue('1')">1</button>
+        <button class="btn" onclick="setScreenValue('2')">2</button>
+        <button class="btn" onclick="setScreenValue('3')">3</button>
+
+        <br>
+
+        <button class="btn" onclick="setScreenValue('+')">+</button>
+        <button class="btn" onclick="setScreenValue()">=</button>
+        <button class="btn" style="width: 200px;" onclick="clearScreen()">C</button>
+    </div>
+    <script>
+        function clearScreen() {
+            document.getElementById("result").value = "";
+        }
+        function setScreenValue(value) {
+            document.getElementById("result").value += value;
+        }
+        function calculateResult() {
+            const resultElement = document.getElementById("result");
+            const expression = resultElement.value.trim();
+        }
+        if (expression === '') {
+            resultElement.value = 'Enter an expression';
+            return;
+        }
+
+        try {
+            resultElement.value = eval(expression);
+        } catch (e) {
+            resultElement.value = 'Invalid expression';
+        }
+    </script>
+</body>
+
+</html>

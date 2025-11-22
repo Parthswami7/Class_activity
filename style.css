@@ -1,0 +1,56 @@
+/* ========= Global Styles ========= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #252525;
+    font-family: "Baloo Tamma 2", cursive;
+}
+
+/* ========= Navigation Bar ========= */
+
+.navigation {
+    background: transparent;
+}
+
+/* Logo + CODINGAL text */
+.navigation i {
+    margin-right: 5px;
+}
+
+/* Links in navbar */
+.navigation-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* Hover effect for links */
+.navigation-link:hover {
+    color: #ffc107 !important;
+    /* Bootstrap warning color */
+    text-decoration: none;
+}
+
+/* Prevent underline on hover */
+.navigation a:hover {
+    text-decoration: none;
+}
+
+/* ========= Responsive Fix ========= */
+@media (max-width: 768px) {
+    .navigation .row {
+        text-align: center;
+    }
+
+    .col-6,
+    .col-3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
