@@ -1,59 +1,68 @@
-/* Global settings */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Slab', serif;
-    background-color: #121212;
-    /* dark background */
+body{
+  font-family: 'Open Sans',sans-serif;
+  background-color: black;
 }
 
-/* About Section */
-.about {
-    min-height: 100vh;
-    background: #1a1a1a;
+/*  
+R = Red 
+G = Green 
+B = Blue 
+Called as : Additive Color Model 
+white = (255,255,255) px 
+black = (0,0,0)
+A = Alpha (opacity/ transparency) = 0 (transparent) OR 1 (opaque))
+
+*/
+
+#container{
+  width: 1000px;
+  height: 550px;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(bgImg.jpg);
+  margin: 20px auto;
 }
 
-/* Main Heading */
-.m-heading {
-    font-family: 'Snap ITC', cursive;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+#calculator{
+  width: 320px;
+  height: 520px;
+  background-color: #eaedef;
+  margin: 0 auto;
+  top: 20px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Paragraph text */
-.about p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #e0e0e0;
+#result{
+  height: 120px;
 }
 
-/* Image styling */
-.img-fluid {
-    max-width: 100%;
-    height: auto;
+#keyboard{
+  height: 400px;
 }
 
-/* Button styling fine-tune */
-.btn-outline-warning {
-    margin-top: 20px;
-    padding: 10px 25px;
-    font-size: 1rem;
-    border-radius: 25px;
+.operator, .number, .empty{
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+  float: left;
+  border-radius: 50%;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-/* Responsive for small screens */
-@media (max-width: 768px) {
-    .m-heading {
-        font-size: 2.2rem;
-        text-align: center;
-    }
+.number, .empty{
+  background-color: #eaedef;
+}
 
-    .about .row {
-        text-align: center;
-    }
+.number, .operator{
+  cursor: pointer;
+}
 
-    .about img {
-        margin-bottom: 20px;
-    }
+.operator:active, .number:active{
+  font-size: 13px;
+}
+
+.operator:focus, .number:focus, .empty:focus{
+  outline: 0;
 }
