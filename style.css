@@ -101,8 +101,11 @@ button:nth-child(20) {
 
 .operator:active, .number:active{
   font-size: 13px;
+  background-color: hotpink;
 }
 
 .operator:focus, .number:focus, .empty:focus{
   outline: 0;
+  color: blue;
+  background-color: yellow;
 }
