@@ -1,4 +1,4 @@
-x = 7
+x = int(input("Enter a number:"))
 if(x%2 == 0):
     print("even")
 else:
