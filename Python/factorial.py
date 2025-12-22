@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Python program to check if a number is prime
 # Take input from the user
 num = int(input("Enter a number: "))
@@ -17,7 +17,6 @@ if num > 1:
 else:
     # Numbers less than 2 are not prime
     print(f"{num} is not a prime number.")
-=======
 def add(x,y):
     return x+y
 
@@ -41,4 +40,3 @@ print(sub(num1,num2))
 print(mul(num1,num2))
 
 print(divide(num1,num2))
->>>>>>> 027272f30868ad8287a548ca8b6d123252cbd15c
