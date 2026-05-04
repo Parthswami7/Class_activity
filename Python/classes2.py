@@ -1,6 +1,6 @@
 class Student:
-    grade = 9
-    name = "Parth"
+    grade =9
+    name ="Parth"
     def introduction(self):
         print("Hi I am A student")
     def details(self):

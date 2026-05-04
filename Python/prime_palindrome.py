@@ -12,3 +12,5 @@ for num in range(1,a+1):
             temp //=10
         if rev == num:
             print(num)
+
+            

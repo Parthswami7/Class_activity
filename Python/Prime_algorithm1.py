@@ -11,7 +11,7 @@ def SieveOfEratosthenes(num):
         if prime[p]:
             print(p)
 
-num = int(input("Enter a number:"))
+num = int(input("Enter a number"))
 print("Following are the prime numbers smaller")
 print("than or equal to", num)
 SieveOfEratosthenes(num)
