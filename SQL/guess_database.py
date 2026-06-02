@@ -5,4 +5,8 @@ if answer == 2:
 else:
     print("Unfortunately your guess was wrong.")
 
-print("\nPlease tell your mentor why you guessed this?")
+print("\nPlease tell me why you guessed this?")
+
+Answer = input("Enter your answer here :-")
+
+print("Ohh! Now I got why you guessed that.")

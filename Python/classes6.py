@@ -28,11 +28,11 @@ if __name__ == "__main__":
 
     books = Library(
         ['Python', 'Rich Dad Poor Dad', 'Harry Potter', 'C++ Basics', 'Algorithms by CLRS'],
-        "Let's Upskill"
+        "Balaji library"
     )
 
     while True:
-        print(f"Welcome to the {books.name} library. Enter your choice to continue")
+        print(f"Welcome to the {books.name}. Enter your choice to continue")
         print("1. Display Books")
         print("2. Lend a Book")
         print("3. Add a Book")

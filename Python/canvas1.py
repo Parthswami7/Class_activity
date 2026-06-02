@@ -1,7 +1,7 @@
 import turtle
 
 # creating canvas
-turtle.Screen().bgcolor("Orange")
+turtle.Screen().bgcolor("yellow")
 
 sc = turtle.Screen()
 sc.setup(400, 300)
