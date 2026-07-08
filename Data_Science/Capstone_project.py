@@ -5,7 +5,7 @@ import seaborn as sns
 
 print(sns.get_dataset_names())
 
-df = sns.load_dataset('pengiuns')
+df = sns.load_dataset('penguins')
 
 print(df.head(10))
 
