@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 import mysql.connector
+
 app = Flask(__name__)
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     msg = ''
@@ -13,7 +15,7 @@ def login():
         mydb = mysql.connector.connect(
             host="remotemyql.com",
             user="Rz8hqnldk4",
-            password="nd0wK03xe0",
+            password="nd0wK03xe",
             database="Rz8hqnldk4"
         )
 
@@ -43,7 +45,11 @@ def login():
 
         else:
             msg = "Incorrect Credentials. Kindly check"
-            return render_template('login.html', msg=msg)
+
+            return render_template(
+                'login.html',
+                msg=msg
+            )
 
     else:
         return render_template('login.html')
