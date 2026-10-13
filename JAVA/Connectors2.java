@@ -7,6 +7,6 @@ class Main {
         String name = sc.nextLine();
         System.out.println("Enter your lucky number:");
         int lucky=sc.nextInt();
-        System.out.println("Hello "+name +", Your lucky number "+lucky +"shows you are really hardworking.Keep it up!")
+        System.out.println("Hello "+name +", Your lucky number "+lucky +"shows you are really hardworking.Keep it up!");
     }
 }

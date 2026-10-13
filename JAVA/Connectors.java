@@ -10,4 +10,4 @@ class Main {
             System.out.println("The value of i is:"+j);
         }
     }
-}z
+}
